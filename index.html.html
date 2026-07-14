@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Para você minha princesa 🤍</title>
+<style>
+    body {
+        background: linear-gradient(to right, #ff758c, #ff7eb3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-family: Arial;
+        color: white;
+        text-align: center;
+    }
+    .card {
+        background: rgba(0,0,0,0.3);
+        padding: 30px;
+        border-radius: 15px;
+    }
+    button {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 18px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h1 id="titulo">Oi, amor 🤍</h1>
+    <p id="msg">tudo bem? vim te apresentar um pouco do meu estudo e quem sabe trabalho atravez dessa declaração...</p>
+    <button id="btn-mensagem" onclick="mostrarMensagem()">Clique aqui</button>
+    <button id="btn-fotos" onclick="mostrarFotos()" style="display: none;">clique aqui🤍</button>
+   <div id="galeria-fotos" style="display: none; margin-top: 20px; justify-content: center; gap: 15px; max-width: 360px; margin-left: auto; margin-right: auto; flex-wrap: wrap;">
+          <img src="foto1.jpg" style="width: 160px; height: 160px; object-fit: cover; border-radius: 10px;">
+          <img src="foto2.jpg" style="width: 160px; height: 160px; object-fit: cover; border-radius: 10px;">
+          <img src="foto3.jpg" style="width: 160px; height: 160px; object-fit: cover; border-radius: 10px;">
+          <img src="foto4.jpg" style="width: 160px; height: 160px; object-fit: cover; border-radius: 10px;">
+          <img src="foto5.jpg" style="width: 160px; height: 160px; object-fit: cover; border-radius: 10px;">
+          <img src="foto6.jpg" style="width: 160px; height: 160px; object-fit: cover; border-radius: 10px;">
+          <img src="foto7.jpg" style="width: 160px; height: 160px; object-fit: cover; border-radius: 10px;">
+          <img src="foto8.jpg" style="width: 160px; height: 160px; object-fit: cover; border-radius: 10px;">
+          <img src="foto9.jpg" style="width: 160px; height: 160px; object-fit: cover; border-radius: 10px;">
+          <img src="foto10.jpg" style="width: 160px; height: 160px; object-fit: cover; border-radius: 10px;">
+      </div>
+
+<script>
+function mostrarMensagem() {
+    document.getElementById("msg").innerHTML = 
+    "Você é a melhor parte dos meus dias.<br><br>" +
+    "Eu amo seu jeito, seu sorriso e tudo em você.<br><br>" +
+    "Obrigado por existir na minha vida,você chegou do nada e se tornou tudo para mimm.<br><br>" +
+    "Quero passar o resto da minha vida te amando cada dia mais, Carla 🤍";
+    document.getElementById("titulo").style.display = "none";
+    document.getElementById("btn-mensagem").style.display = "none";
+    document.getElementById("btn-fotos").style.display = "inline-block";
+}
+function mostrarFotos() {
+    // esconde o texto da mensagemanterior por completo
+    document.getElementById("msg").style.display = "none";
+
+    // altere a div de fotos para "flex" para que as fotos fiquem lado a lado
+    document.getElementById("galeria-fotos").style.display = "flex";
+
+// esconde o segundo botão para limpar o visual
+    document.getElementById("btn-fotos").style.display = "none";
+}
+
+</script>
+</body>
+</html>
